@@ -20,6 +20,8 @@ RUN mix deps.get
 # Compile the project
 RUN mix compile
 
+RUN mix assets.deploy
+
 RUN mix release
 
 # Run the Phoenix app
