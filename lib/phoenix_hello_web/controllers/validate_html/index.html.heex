@@ -1,16 +1,16 @@
 <form action="/validate" method="post">
-      <input type="text" class="input-field" placeholder="Enter a number" name="number">
-      <button class="button" type="submit">Submit</button>
-      <%= if @invalid_value do %>
-        <p class="error"> Please enter a number!</p>
-      <% else %>
-        <%= if @is_bigger == "yes" do %>
-         <p> Is <%= @number %> greater than 2? </p>
-         <p> <strong class="ok"> <%= @is_bigger %> </strong> </p>
-        <% end %>
-        <%= if @is_bigger == "no" do %>
-         <p> Is <%= @number %> greater than 2? </p>
-         <p>  <strong class="error"> <%= @is_bigger %> </strong> </p>
-       <% end %>
-      <% end %>
+  rinput type="text" class="input-field" placeholder="Enter a number" name="number" />
+  <button class="button" type="submit">Submit</button>
+  <%= if @invalid_value do %>
+    <p class="error">Please enter a number!</p>
+  <% else %>
+    <%= if @is_bigger == "yes" do %>
+      <p>Is <%= @number %> greater than 2?</p>
+      <p><strong class="ok"><%= @is_bigger %></strong></p>
+    <% end %>
+    <%= if @is_bigger == "no" do %>
+      <p>Is <%= @number %> greater than 2?</p>
+      <p><strong class="error"><%= @is_bigger %></strong></p>
+    <% end %>
+  <% end %>
 </form>
