@@ -4,7 +4,8 @@ FROM elixir:1.15.7-otp-25
 # Set the working directory in the container
 WORKDIR /app
 
-ENV MIX_ENV="dev"
+ENV MIX_ENV="prod"
+ENV SECRET_KEY_BASE="secret"
 
 # Copy the current directory contents into the container at /app
 COPY . /app
@@ -19,5 +20,7 @@ RUN mix deps.get
 # Compile the project
 RUN mix compile
 
+RUN mix release
+
 # Run the Phoenix app
-CMD ["mix", "phx.server"]
+CMD ["_build/prod/rel/phoenix_hello/bin/phoenix_hello", "start"]
