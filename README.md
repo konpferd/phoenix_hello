@@ -1,4 +1,6 @@
-# PhoenixHello
+# PhoenixHello  
+
+https://phoenix-hello-2f7afa795c12.herokuapp.com/validate  
 
 To start your Phoenix server:
 
